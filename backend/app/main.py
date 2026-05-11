@@ -12,7 +12,7 @@ app = FastAPI(
 # CORS middleware
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000", "https://promptfrontend-five.vercel.app/"],  # Next.js frontend and Vercel frontend
+    allow_origins=["http://localhost:3000", "https://promptfrontend-five.vercel.app/", "https://prompt-enhancer-8hdn.onrender.com"],  # Next.js frontend, Vercel frontend, and Render backend
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
