@@ -1,0 +1,11 @@
+{
+  "name": "promptforge-frontend",
+  "version": "1.0.0",
+  "description": "Deployment script for PromptForge frontend",
+  "scripts": {
+    "vercel:deploy": "next build && next export && vercel --prod"
+  },
+  "devDependencies": {
+    "@vercel/cli": "^31.0.0"
+  }
+}
