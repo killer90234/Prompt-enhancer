@@ -72,7 +72,7 @@ export default function Home() {
 
         {/* Footer */}
         <div className="mt-12 text-center text-gray-500 text-sm">
-          <p>Powered by NVIDIA AI • Built with Next.js and FastAPI</p>
+          <p>Powered by Inforium Alliance</p>
         </div>
       </div>
     </div>
