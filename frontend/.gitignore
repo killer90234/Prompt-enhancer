@@ -1,8 +1,12 @@
 # Dependencies
 node_modules/
-/.next/
-.next
+
+# Next.js
+.next/
 out/
+
+# React
+. react/
 
 # Testing
 coverage/
@@ -11,8 +15,14 @@ coverage/
 # Production
 build
 dist
-out
+
+# Environment files
+.env*
+!.env.example
 .env.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # Vercel
 .vercel
@@ -27,21 +37,14 @@ pids/
 *.seed
 *.pid.lock
 
-# Certificates
-*.pem
-*.crt
-*.key
-
-# Temporary
-tmp/
-tmp.*.js
-*.tmp
-*.temp
-*.swp
+# Typescript
+*.tsbuildinfo
 
 # IDEs
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS generated files
 .DS_Store
@@ -55,36 +58,25 @@ Thumbs.db
 .~lock.*
 Desktop.ini
 
-# Environment files
-.env*
-!.env.example
+# Editor files
+*.sublime-project
+*.sublime-workspace
 
-# Next.js
-.next/
-out/
-.nuxt
-.vuepress/dist
+# Typescript/Node
+.nyc_output/
+coverage/
+.nyc_output
 
-# Nuxt
-.nuxt
+# Yarn
+yarn-debug.log*
+.yarn-integrity
+.yarn-state.yml
+yarn-error.log
 
-# vuepress
-.vuepress/dist
-
-# Gatsby
-.cache/
-content/
-contentSync.js
-contentMetada
-.sha
-static/Sync
-.js
-
-# Typescript
-*.tsbuildinfo
-
-# Rollup
-.rollup.cache
+# NPM
+npm-debug.log*
+.npm
+.npmrc
 
 # Grunt
 .grunt
@@ -94,9 +86,37 @@ bower_components
 
 # Lock files
 package-lock.json
-yarn.lock
+ynavigatordock.lock
 pnpm-lock.yaml
 
 # Optional npm cache
 .npm
 .npm/_cacache
+
+# Temporary files
+tmp/
+tmp.*.js
+*.tmp
+*.temp
+
+# Cache
+.cache
+.cache/
+
+# Next.js specific
+.next
+.nuxt
+.vuepress/dist
+
+# Build outputs
+build/
+dist/
+
+# Local development
+.env.local
+
+# Typescript build
+*.tsbuildinfo
+
+# Nodemon
+.nodemon
