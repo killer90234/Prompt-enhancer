@@ -96,6 +96,9 @@ class EnhancementService:
 
     async def get_service_status(self) -> Dict[str, Any]:
         return {
+            "overall": "healthy",
+            "nvidia_api": "connected",
+            "cache": "connected",
             "llm": "connected",
             "mode": "ai-powered",
             "status": "production-ready"

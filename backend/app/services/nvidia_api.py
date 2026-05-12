@@ -114,7 +114,10 @@ User Prompt:
 
             response.raise_for_status()
 
-            data = response.json()
+            try:
+                data = response.json()
+            except Exception:
+                raise NVIDIAAPIError(f"Invalid JSON response: {response.text}")
 
             return {
                 "optimized_prompt": data["choices"][0]["message"]["content"]
@@ -122,6 +125,8 @@ User Prompt:
 
         except httpx.HTTPStatusError as e:
             raise NVIDIAAPIError(f"HTTP error: {e.response.text}")
+        except NVIDIAAPIError:
+            raise
         except Exception as e:
             raise NVIDIAAPIError(str(e))
 
