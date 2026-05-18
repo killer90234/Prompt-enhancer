@@ -29,7 +29,7 @@ export default function CopyButton({ text, size = 'md' }: CopyButtonProps) {
   return (
     <button
       onClick={handleCopy}
-      className={`inline-flex items-center gap-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors ${sizeClasses[size]}`}
+      className={`inline-flex items-center gap-2 bg-indigo-600/80 text-white rounded-lg hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/25 transition-all ${sizeClasses[size]}`}
     >
       {copied ? (
         <>
