@@ -39,15 +39,15 @@ export default function ResultCard({ result }: ResultCardProps) {
   return (
     <div className="bg-gray-900/60 backdrop-blur-xl border border-white/[0.08] rounded-2xl overflow-hidden shadow-2xl">
       {/* Header */}
-      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-6">
-        <div className="flex justify-between items-center">
-          <div>
-            <h2 className="text-xl font-bold text-white mb-2">Enhanced Prompt</h2>
-            <div className="flex items-center gap-3">
-              <span className={`px-3 py-1 rounded-full text-xs font-medium border ${getScoreColor(result.score)}`}>
+      <div className="bg-gradient-to-r from-indigo-600 to-purple-600 p-4 md:p-6">
+        <div className="flex justify-between items-start gap-3">
+          <div className="min-w-0">
+            <h2 className="text-lg md:text-xl font-bold text-white mb-2">Enhanced Prompt</h2>
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className={`px-2 py-0.5 md:px-3 md:py-1 rounded-full text-[10px] md:text-xs font-medium border ${getScoreColor(result.score)}`}>
                 Score: {result.score}/10 — {getScoreLabel(result.score)}
               </span>
-              <span className="text-indigo-200 text-xs uppercase tracking-wider">
+              <span className="text-indigo-200 text-[10px] md:text-xs uppercase tracking-wider">
                 {result.mode}
               </span>
             </div>
@@ -57,8 +57,8 @@ export default function ResultCard({ result }: ResultCardProps) {
       </div>
 
       {/* Tabs */}
-      <div className="border-b border-white/[0.06]">
-        <nav className="flex gap-1 px-6 pt-2" aria-label="Tabs">
+      <div className="border-b border-white/[0.06] overflow-x-auto">
+        <nav className="flex gap-1 px-3 md:px-6 pt-2 min-w-max" aria-label="Tabs">
           {tabs.map((tab) => (
             <button
               key={tab.id}
@@ -76,7 +76,7 @@ export default function ResultCard({ result }: ResultCardProps) {
       </div>
 
       {/* Content */}
-      <div className="p-6 space-y-6">
+      <div className="p-4 md:p-6 space-y-4 md:space-y-6">
         {/* Enhanced Prompt */}
         <div>
           <h3 className="text-xs font-medium text-gray-500 uppercase tracking-wider mb-3">Enhanced Prompt</h3>
